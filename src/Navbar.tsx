@@ -1,3 +1,5 @@
+import { Link } from "react-router";
+
 const Navbar = () => {
   return (
     <nav className="bg-gray-900 text-white py-4 px-6 hidden md:flex items-center justify-between">
@@ -10,15 +12,15 @@ const Navbar = () => {
 
       {/* Right Side: Navigation Links */}
       <div className="flex space-x-6">
-        <a href="#" className="hover:text-gray-300 transition-colors">
+        <Link to="/" className="hover:text-gray-300 transition-colors">
+          Home
+        </Link>
+        <Link to="/about" className="hover:text-gray-300 transition-colors">
           About
-        </a>
-        <a href="#" className="hover:text-gray-300 transition-colors">
+        </Link>
+        <Link to="/movies" className="hover:text-gray-300 transition-colors">
           Movies
-        </a>
-        <a href="#" className="hover:text-gray-300 transition-colors">
-          Policy
-        </a>
+        </Link>
       </div>
     </nav>
   );

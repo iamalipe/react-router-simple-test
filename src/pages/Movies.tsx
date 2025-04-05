@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import { demoData } from "../demoData";
 
 type MovieType = {
@@ -27,8 +28,11 @@ export default Movies;
 
 const MovieLinks = ({ data }: { data: MovieType }) => {
   return (
-    <a className="text-white p-4 border rounded hover:border-dashed" href="#">
+    <Link
+      className="text-white p-4 border rounded hover:border-dashed"
+      to={`/movies/${data?.id}`}
+    >
       <span>{data?.name}</span>
-    </a>
+    </Link>
   );
 };
